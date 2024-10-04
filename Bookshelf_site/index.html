@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shelf</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="container">
+        
+        <section class="row">
+            
+            <!-- TITLE -->
+            <header class="col-lg-12">
+                <h1 class="title alert alert-primary text-center">Bookshelf Apps</h1>
+            </header>
+            
+            <!-- LEFT -->
+            <section class="col-lg-4">
+                
+                <div class="card">
+                    <div class="card-body">
+                        <form action="#" id="form">
+                            
+                            <input type="hidden" name="id" id="inputBookId">
+                            
+                            <label for="inputBookTitle">Title</label>
+                            <input type="text" placeholder="Title" class="form-control" id="inputBookTitle" required> <br>
+                            
+                            <label for="inputBookAuthor">Author</label>
+                            <input type="text" placeholder="Author" class="form-control" id="inputBookAuthor" required> <br>
+                            
+                            <label for="inputBookYear">Year</label>
+                            <input type="number" placeholder="Year" class="form-control" id="inputBookYear" required> <br>
+                            
+                            <label for="inputBookisComplete">Finished Reading</label>
+                            <input type="checkbox" id="inputBookisComplete"> <br> <br>
+                            
+                            <button class="btn btn-sm btn-primary" onclick="save()">Save</button>
+                            <button class="btn btn-sm btn-primary" onclick="clearData()">Reset</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <!-- RIGHT -->
+            <section class="col-lg-8">
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Unread</h2>
+                        
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-striped">
+                                
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Year</th>
+                                        <th>Read</th>
+                                        <th>Edit</th>
+                                        <th>Hapus</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody id="table"></tbody>
+                                
+                            </table>
+                        </div> <hr>
+                        
+                        <h2>Read</h2>
+                        
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-striped">
+                                
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Year</th>
+                                        <th>Read</th>
+                                        <th>Edit</th>
+                                        <th>Hapus</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody id="table2"></tbody>
+                                
+                            </table>
+                        </div> <hr>
+                    </div>
+                </div>
+                
+            </section>
+            
+        </section>
+        
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        allData();
+    </script>
+</body>
+</html>
